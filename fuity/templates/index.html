@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Sale!</title>
+    {% load static %}
+    <script></script>
+
+</head>
+
+<body>
+
+    <div id='title'>
+        <h1>Dojo Fruit Store!</h1>
+    </div>
+
+    <div id='main'>
+
+        <form action="submit_info" method="POST">
+            {% csrf_token %}
+
+            <div id='buy_title'>
+                <h3>What would you like to buy?</h3>
+            </div>
+
+            <div id='buy_section'>
+
+                <table>
+                    <tr>
+                        <th>Fruit Name</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <td>Lychee</td>
+                        <td>
+                            <select name="lychee" id="lychee">
+                                <option value ='0'>0</option>
+                                <option value ='1'>1</option>
+                                <option value ='2'>2</option>
+                                <option value ='3'>3</option>
+                                <option value ='4'>4</option>
+                                <option value ='5'>5</option>
+                                <option value ='12'>bushel</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Rambutan</td>
+                        <td>
+                            <select name="rambutan" id="rambutan">
+                                <option value ='0'>0</option>
+                                <option value ='1'>1</option>
+                                <option value ='2'>2</option>
+                                <option value ='3'>3</option>
+                                <option value ='4'>4</option>
+                                <option value ='5'>5</option>
+                                <option value ='12'>bushel</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jackfruit</td>
+                        <td>
+                            <select name="jackfruit" id="jackfruit">
+                                <option value ='0'>0</option>
+                                <option value ='1'>1</option>
+                                <option value ='2'>2</option>
+                                <option value ='3'>3</option>
+                                <option value ='4'>4</option>
+                                <option value ='5'>5</option>
+                                <option value ='12'>bushel</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div id='info'>
+                <h3>Your Information</h3>
+
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name"> <br>
+
+                <label for="student_id">Student ID:</label>
+                <input type="text" name="student_id" id="student_id"> <br>
+
+                <button type="submit">Buy me fruit!</button>
+
+            </div>
+
+        </form>
+    </div>
+
+    <div id='welcome'>
+        <h3>Welcome to Dojo Fruit Store!</h3>
+        <p>Your dojo decided to buy fruits for all of the students! Please use this app to tell us what you would like to have! Once we get your order, we'll charge your student account automatically.</p><br>
+        <p>Dojo Fruit Store is proudly built by George's pythonian students brand new to Django and already throwing fruit.</p>
+    </div>
+
+    <style>
+        * {
+            margin: 0 auto;
+            font-family: cursive;
+        }
+        
+        body {
+            width: 970px;
+            height: 1000px;
+            background-color: aquamarine;
+            margin: 0 auto;
+        }
+        
+        #title {
+            width: 300px;
+            margin-left: 90px;
+            text-shadow: 2px 2px gray;
+            margin-top: 20px;
+        }
+        
+        #welcome {
+            height: 407px;
+            width: 220px;
+            background-color: plum;
+            padding: 10px;
+            border: 1px solid black;
+            display: inline-block;
+            margin-top: 5px;
+            margin-left: 10px;
+            box-shadow: 5px 5px gray;
+            border-radius: 5px;
+        }
+        
+        h3 {
+            margin-bottom: 15px;
+            margin-top: 5px;
+        }
+        
+        #main {
+            display: inline-block;
+            height: 370px;
+            width: 420px;
+            background-color: powderblue;
+            vertical-align: top;
+            margin-top: 50px;
+            padding: 5px;
+            margin-left: 10px;
+            border: 1px solid black;
+            box-shadow: 5px 5px gray;
+        }
+        
+        table {
+            border: 1px solid black;
+            width: 320px;
+            height: 170px;
+            border-radius: 5px;
+        }
+        
+        button {
+            background-color: greenyellow;
+            margin: 15px 0px 0px 230px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        
+        #name {
+            margin-bottom: 10px;
+        }
+        
+        #info {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        
+        #buy_title {
+            margin-left: 10px;
+        }
+    </style>
+
+
+
+</body>
+
+</html>
+
+</html>

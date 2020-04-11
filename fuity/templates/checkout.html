@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+
+    <style>
+        body {
+            margin-left: 200px;
+            margin-top: 50px;
+            border: 1px solid black;
+            display: inline-block;
+            padding: 5px 20px 30px 20px;
+            font-family: cursive;
+            background-color: white;
+            box-shadow: 5px 5px gray;
+        }
+        
+        h1 {
+            text-decoration: underline;
+        }
+        
+        h2 {
+            text-decoration: underline;
+        }
+        
+        h3 {
+            text-decoration: underline;
+        }
+        
+        #end {
+            color: rgba(5, 5, 7, 0.466);
+            margin-left: 75px;
+            margin-top: 30px;
+        }
+        
+        #gohome {
+            background-color: gray;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-left: 130px;
+            height: 30px;
+            width: 100px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <h1>Thank you for your order!</h1>
+
+    <div>
+        <p>We ordered {{ count }} items for you and charged your <br> student account on {{ time }}.</p>
+    </div>
+
+    <h2>You've ordered</h2>
+
+    <div>
+        <table>
+            <tr>
+                <th>Fruit Name:</th>
+                <th>Quantity:</th>
+            </tr>
+            <tr>
+                <td>Lychee</td>
+                <td>{{ lychee }}</td>
+            </tr>
+            <tr>
+                <td>Rambutan</td>
+                <td>{{ rambutan }}</td>
+            </tr>
+            <tr>
+                <td>Jackfruit</td>
+                <td>{{ jackfruit }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>Your Information</h3>
+
+    <p>Name: {{ name }}</p>
+    <p>Your Student ID: {{ student_id }}</p>
+    <p id='end'>Thanks for your mulah! Hahahahaha! How do you like dem asian apples?</p>
+    <p id='end'>Have a Delightfully Dojoian Day!!!</p>
+
+    <form action="/">
+        <button type='submit' id='gohome'>Go Back</button>
+    </form>
+
+</body>
+
+</html>
